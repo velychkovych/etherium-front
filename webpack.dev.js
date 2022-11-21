@@ -27,7 +27,7 @@ module.exports = merge(common, {
 		proxy: {
 			'/api': {
 				changeOrigin: true,
-				target: 'http://localhost:5000',
+				target: 'https://etherium-back.herokuapp.com',
 			},
 		},
 	},
