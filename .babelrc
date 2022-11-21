@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true,
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    "@emotion",
+    "@babel/transform-arrow-functions",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-throw-expressions",
+    "@babel/plugin-transform-modules-commonjs"
+  ]
+}
