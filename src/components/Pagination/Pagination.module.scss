@@ -1,0 +1,76 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+
+@mixin font {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	@include center;
+	display: flex;
+	flex-direction: row;
+	min-height: 48px;
+	width: 100%;
+}
+
+.pageNumber {
+	@include center;
+	@include font;
+
+	margin: 0 10px;
+	width: 48px;
+	height: 48px;
+	border: 2px #f1f1f1 solid;
+	border-radius: 8px;
+
+	&:hover {
+		background-color: #f1f1f1;
+		-webkit-transition: background-color 0.25s linear;
+		-ms-transition: background-color 0.25s linear;
+		transition: background-color 0.25s linear;
+	}
+
+	&Selected {
+		@include center;
+		@include font;
+
+		margin: 0 10px;
+		width: 48px;
+		height: 48px;
+		border-radius: 8px;
+		background-color: #3a80ba;
+		color: white;
+
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+}
+
+.arrow {
+	margin: 0 10px;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.rotate {
+	@extend .arrow;
+	transform: rotate(180deg);
+
+	&Disabled {
+		margin: 0 10px;
+		transform: rotate(180deg);
+		path {
+			stroke: #f1f1f1;
+		}
+	}
+}

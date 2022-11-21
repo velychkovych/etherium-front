@@ -1,0 +1,45 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+
+@mixin font {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.wrapper {
+	text-align: center;
+	border-collapse: collapse;
+	border-radius: 1em;
+	overflow: hidden;
+	table-layout: fixed;
+	width: 80vw;
+}
+
+.header {
+	@include font;
+	background-color: #3a80ba;
+	line-height: 20px;
+	color: white;
+	th {
+		font-weight: 400;
+		border: 1px white solid;
+		padding: 15px;
+	}
+}
+
+.column {
+	@include font;
+	line-height: 17px;
+	td {
+		border: 1px white solid;
+		max-width: 10vw;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding: 15px;
+	}
+	&:nth-child(even) {
+		background-color: #f1f1f1;
+	}
+}

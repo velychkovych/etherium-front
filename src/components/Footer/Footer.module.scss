@@ -1,0 +1,30 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+
+.wrapper {
+	background-color: #1c3b55;
+	width: 100vw;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.text {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: white;
+	margin: 0;
+}
+
+.appText {
+	@extend .text;
+	font-size: 40px;
+	line-height: 49px;
+}
+
+.copyrightText {
+	@extend .text;
+	font-size: 16px;
+	line-height: 23px;
+}

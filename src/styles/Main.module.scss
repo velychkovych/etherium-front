@@ -1,0 +1,26 @@
+.searchBar {
+	width: 375px;
+	min-height: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #f1f1f1;
+	border-radius: 10px;
+	padding: 4px;
+}
+
+.searchBlock {
+	display: flex;
+	justify-content: space-between;
+	max-width: 450px;
+}
+
+.data {
+	width: 80vw;
+	margin: 30px 0;
+}
+
+.table {
+	margin: 20px 0;
+}

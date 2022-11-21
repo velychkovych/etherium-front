@@ -1,0 +1,28 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+
+@mixin font {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.search {
+	@include font;
+
+	height: 100%;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	display: flex;
+	justify-content: center;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&::placeholder {
+		font-style: italic;
+		color: #979797;
+	}
+}

@@ -1,0 +1,40 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+
+@mixin font {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.wrapper {
+	min-width: 200px;
+    width: 100%;
+}
+
+.activeList {
+	position: absolute;
+	background-color: white;
+}
+
+.button {
+	@include font;
+
+	&:hover {
+		filter: brightness(0.9);
+	}
+
+	transition: filter 300ms;
+
+	width: 200px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 4px;
+
+    &Active {
+        @extend .button;
+        border: 1px solid #f1f1f1;
+        border-radius: 1px;
+    }
+}
