@@ -1,8 +1,12 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = '/api/v1';
+const instance = axios.create({
+	baseURL: 'https://etherium-back.herokuapp.com/api/v1',
+});
 
 export default {
 	getTransactions: (frameNumber, findBy, value) =>
-		axios.get('/transactions', { params: { findBy, value, frameNumber } }),
+		instance.get('/transactions', {
+			params: { findBy, value, frameNumber },
+		}),
 };
